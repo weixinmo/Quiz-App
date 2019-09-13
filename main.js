@@ -12,26 +12,26 @@ function generateQuestion() {
   if (question_Number < STORE.length) {
     updateInfo();
     $('.quiz').html(
-      `
-      <fieldset>
-        <form id="quiz-area">
-        <h3 class="question">${STORE[question_Number].question}</h3>
+      `     
+      <form id="quiz-area">
+        <fieldset>
+          <h3 class="question">${STORE[question_Number].question}</h3>
 
-        <input type = "radio" name="choices" id="a" value="${STORE[question_Number].choice[0]}" required>
-        <label for = "a">${STORE[question_Number].choice[0]}</label><br>
+          <input type = "radio" name="choices" id="a" value="${STORE[question_Number].choice[0]}" required>
+          <label for = "a">${STORE[question_Number].choice[0]}</label><br>
 
-        <input type = "radio" name="choices" id="b" value="${STORE[question_Number].choice[1]}">
-        <label for = "b">${STORE[question_Number].choice[1]}</label><br>
+          <input type = "radio" name="choices" id="b" value="${STORE[question_Number].choice[1]}">
+          <label for = "b">${STORE[question_Number].choice[1]}</label><br>
 
-        <input type="radio" name="choices" id="c" value="${STORE[question_Number].choice[2]}">
-        <label for = "c">${STORE[question_Number].choice[2]}</label><br>
+          <input type="radio" name="choices" id="c" value="${STORE[question_Number].choice[2]}">
+          <label for = "c">${STORE[question_Number].choice[2]}</label><br>
 
-        <input type="radio" name="choices" id="d" value="${STORE[question_Number].choice[3]}">
-        <label for = "d">${STORE[question_Number].choice[3]}</label>
+          <input type="radio" name="choices" id="d" value="${STORE[question_Number].choice[3]}">
+          <label for = "d">${STORE[question_Number].choice[3]}</label>
 
-        <button type="submit">Submit</button>
-        </form> 
-      </fieldset>  
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form> 
       `
     )
   }
